@@ -10,5 +10,10 @@ package problemas;
  * @author reroes
  */
 public class Problema7 {
+    public static void main(String[] args) {
+        String cadena = obtenerCiudades();
+        
+        
+    }
     
 }

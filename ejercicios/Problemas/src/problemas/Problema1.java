@@ -20,6 +20,13 @@ public class Problema1 {
     }
 
     public static void imprimirDatos(int[][] datos) {
+        for (int fila = 0; fila < 3; fila++) {
+            for (int columna = 0; columna < 3; columna++) {
+                if (datos[fila][columna] % 2 == 0) {
+                    System.out.println(datos[fila][columna]); 
+                }
+            }
+        }
 
     }
 
