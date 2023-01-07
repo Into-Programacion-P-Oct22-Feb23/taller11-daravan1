@@ -17,18 +17,30 @@ public class Problema7 {
 
     public static void main(String[] args) {
         String[] lista = obtenerCiudades();
+        System.out.println("El arreglo es: ");
+        for (int i = 0; i < lista.length; i++) {
+            System.out.printf("[%s]", lista[i]);
+
+        }
+        System.out.println("\nSolo debe tener valores de 4 o 5 caracteres");
         obtenerCaracteres(lista);
     }
 
     public static String[] obtenerCiudades() {
         int numero;
-        System.out.println("Ingrese el numero de valores de su lista:\n");
+        System.out.println("Ingrese el numero de valores de su lista:");
         numero = entrada.nextInt();
         entrada.nextLine();
-        String[] cadena = new String [numero];
+        String[] cadena = new String[numero];
         for (int i = 0; i < cadena.length; i++) {
-            System.out.printf("Ingrese el valor de la posicion %d\n", i);
-            cadena[i] = entrada.nextLine();
+            System.out.println("Ingrese ciudades del Ecuador: ");
+            String ciudad = entrada.nextLine();
+            cadena[i] = ciudad;
+        }
+        String mensajeFinal = "";
+        for (int i = 0; i < cadena.length; i++) {
+            mensajeFinal = String.format("%s%s\n",
+                    mensajeFinal, cadena[i]);
         }
         return cadena;
     }
@@ -37,7 +49,7 @@ public class Problema7 {
         for (int i = 0; i < a.length; i++) {
             int caracteres = a[i].length();
             if (caracteres == 4 || caracteres == 5) {
-                System.out.println(a[i]);
+                System.out.printf("%s\n", a[i]);
             }
 
         }
